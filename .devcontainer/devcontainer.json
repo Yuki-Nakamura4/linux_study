@@ -1,0 +1,21 @@
+{
+  "name": "Ubuntu 20.04 Development Container",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-python.python",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "workspaceFolder": "/workspace",
+  "remoteUser": "root",
+  "mounts": ["source=${localWorkspaceFolder},target=/workspace,type=bind"]
+}
